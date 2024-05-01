@@ -47,6 +47,24 @@
     text-decoration: none;
     color: #000;
   }
+  .burger{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+  }
+  .burger div{
+      width: 20px;
+      height: 2px;
+      margin: 5px;
+      background-color: #000000;
+  }
+
+
+
+
   .container{
     max-width: 1300px;
     width: 95%;
@@ -150,16 +168,67 @@
 
 /* burger button  */
 @media (max-width: 768px){
+header{
+  height: 7vh;
+}
   nav .navlinks{
-    width: unset;
-  }
-  .navlinks li{
-    display: none;
+    width: 100%;
+
   }
   nav{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .logo img{
+    position: absolute;
+    width: 150px;
+    margin-left: -65px;
+    margin-top: 1px;
+  }
+  .burger{
+    display: unset;
+  }
+  .navlinks{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5BD2E;
+    top: 0;
+    height: 100vh;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow-y: hidden;
+  }
+  .navlinks li{
+    font-weight: bold;
+  }
+  .nav-active{
+    transform: translateX(0%);
+  }
+  @keyframes navlinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  }
+  .toggles .line1{
+    transform: rotate(-45deg) translate(-5px,5px);
+    transition: all .5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  .toggles .line2{
+    opacity: 0;
+  }
+  .toggles .line3{
+    transform: rotate(45deg) translate(-5px,-5px);
+    transition: all .5s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 }
 
