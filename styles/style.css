@@ -371,6 +371,7 @@
   }
   #products .boxes .box .topic img{
     border-radius: 10%;
+    width: 150px;
   }
 }
 @media (max-width: 1000px){
