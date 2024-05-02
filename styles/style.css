@@ -373,6 +373,13 @@
     border-radius: 10%;
     width: 150px;
   }
+  #products .boxes .box{
+    border: unset;
+    border: .5px solid rgba(158, 158, 158, 0.144);
+  }
+  #banner .container{
+    gap: 10px;
+  }
 }
 @media (max-width: 1000px){
   #service-offer .boxes .box{
