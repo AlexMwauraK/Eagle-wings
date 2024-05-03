@@ -6,6 +6,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+  /* html{
+    opacity: 0;
+  } */
   body{
     font-size: 16px;
   }
@@ -13,6 +16,7 @@
     background-color: rgb(255, 255, 255);
     width: 100%;
     position: fixed;
+    z-index: 999;
   }
   nav{
     max-width: 1300px;
@@ -165,6 +169,7 @@
     flex-direction: column;
     gap: 30px;
     object-fit: contain;
+    overflow: hidden;
     /* background-color: red; */
   }
   #service .container .images img{
@@ -294,6 +299,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  overflow: hidden;
 }
 #products .product-des{
   margin-left: 15px;
@@ -420,6 +426,7 @@
     text-transform: uppercase;
     transform: translateX(-100%);
     transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
     overflow-y: hidden;
   }
   .navlinks li{
@@ -544,4 +551,31 @@
       padding: 40px 0;
     }
   }
-  
+/* Animations  */
+  .animate {
+    opacity: 0;
+    transform: translateX(-5%);
+    transition: all .5s;
+    overflow: hidden;
+  }
+  .animate2 {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s, filter 0.5s;
+  }
+  .animate3{
+    opacity: 0;
+    transform: translateY(25%);
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .animate4{
+    opacity: 0;
+    transform: translateX(5%);
+    transition: all .5s;
+    overflow: hidden;
+  }
+  .show{
+    opacity :  1 !important;;
+    filter: blur(0);
+    transform: scale(1);
+  }
