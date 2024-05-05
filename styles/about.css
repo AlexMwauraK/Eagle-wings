@@ -6,11 +6,12 @@ header{
 #about-hero{
   padding-top: 70px;
   background-color: #F5BD2E;
+  overflow: hidden;
 }
 #about-hero .container{
   display: flex;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 20px 0 40px 0;
   border-top: 1px solid rgba(128, 128, 128, 0.514);
 }
 #about-hero .container h2{
@@ -61,7 +62,10 @@ header{
     gap: 20px;
   }
   #about-hero .container h2{
-    font-size: 45px;
+    font-size: 35px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
   }
   #about-hero .container .image{
     width: unset;
@@ -69,6 +73,7 @@ header{
 
   #our-story .container{
     flex-direction: column;
+    padding: 20px 0 60px 5px;
   }
   #our-story .container .our-story{
     width: unset;

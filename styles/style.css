@@ -200,6 +200,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 8px 0;
     font-size: 20px;
     border: 1px solid rgba(128, 128, 128, 0.404) ;
@@ -285,11 +286,13 @@
 
 #products{
   padding: 45px 0 30px 0;
+  background-color: rgb(236, 231, 248);
 }
 #products .title{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 8px 0;
   font-size: 20px;
   border: 1px solid rgba(128, 128, 128, 0.404) ;
@@ -305,7 +308,9 @@
   margin-left: 15px;
   gap: 20px;
 }
-#products .product-des p{
+#products .product-des p,
+#products .product-des h3
+{
   display: flex;
   text-align: left;
 }
@@ -320,14 +325,14 @@
   align-items: flex-end;
 }
 #products .boxes .box .topic img{
-  width: 100px;
+  width: 120px;
 }
 #products .boxes .box{
   display: flex;
   margin: 20px 0;
-  width: calc(100% / 3 - 30px);
+  width: calc(100% / 3 - 20px);
   text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
   inset: 10px 5px 10px rgb(0, 0, 0);
   border-right: .5px solid rgba(68, 68, 68, 0.1);
   border-left: .5px solid rgba(68, 68, 68, 0.1);
@@ -349,7 +354,7 @@
   color: #ffff;
   border-radius: 8px;
   border: .5px solid transparent;
-  margin-top: 20px;
+  margin: 10px 0 30px 0;
 }
 #products .course a:hover{
   background-color: #fff;
@@ -366,22 +371,26 @@
 @media (max-width: 890px){
   #products .boxes .box{
     width: 100%; 
-    display: block;
+    /* display: block; */
   }
   #products .product-des{
     margin-left: 15px;
-    gap: 5px;
+    gap: 25px;
+    /* background-color: red; */
+    padding: 10px 0 0 0;
   }
   #products .boxes .box{
-    padding: 10px 5px;
+    margin: 10px 0;
+    padding: unset;
+    padding: 10px 5px 20px 5px;
   }
   #products .boxes .box .topic img{
     border-radius: 10%;
-    width: 150px;
+    width: 120px;
   }
   #products .boxes .box{
     border: unset;
-    border: .5px solid rgba(158, 158, 158, 0.144);
+    border: .5px solid rgba(158, 158, 158, 0.349);
   }
   #banner .container{
     gap: 10px;
@@ -511,6 +520,7 @@
   }
   #detail .container .image{
     width: 250px;
+    border-radius: 45%;
   }
   #detail .container P{
     text-align: justify;
